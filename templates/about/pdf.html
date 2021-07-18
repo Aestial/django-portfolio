@@ -41,9 +41,6 @@
                 </div>
                 {% for exp in workexp.all %}
                 <div class="row justify-content-center py-2">
-                    <!-- <div class="col-1 pr-0">
-                        {{ exp.start_date_pretty }} - {{ exp.end_date_pretty }}
-                    </div> -->
                     <div class="col-12 text-left">
                         <div class="col-12">
                             <h5 class="font-weight-bold">
@@ -55,9 +52,9 @@
                                 {{ exp.place }}
                             </span>
                         </div>
-                        <div class="col-8 d-lg-none">
+                        <div class="col-8">
                             <p>
-                                {{ exp.start_date_pretty }} - {{ exp.end_date_pretty }}
+                                {{ exp.start_date_pretty }} - {% if exp.is_current %}Current{% else %}{{ exp.end_date_pretty }}{% endif %}
                             </p>
                         </div>
                         <div class="col-12">
