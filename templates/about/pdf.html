@@ -93,7 +93,7 @@
                         </div>
                         <div class="col-8">
                             <p>
-                                {{ exp.start_date_pretty }} - {% if exp.first %}Current{% else %}{{ exp.end_date_pretty }}{% endif %}
+                                {{ exp.start_date_pretty }} - {% if exp.is_current %}Current{% else %}{{ exp.end_date_pretty }}{% endif %}
                             </p>
                         </div>
                         <div class="col-12">
